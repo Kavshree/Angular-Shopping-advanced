@@ -1,0 +1,19 @@
+<div ng-controller="detailsCtrl" ng-model="products">
+<h1> {{products[whichItem].title}}</h1>
+<img class="col-lg-4" ng-src="{{products[whichItem].image}}"/>
+<p class="col-lg-6">
+<h4> EMI: {{products[whichItem].EMI}}</h4>
+<h3>Price: {{products[whichItem].price | currency:" USD$ "}}</h3>
+<hr>
+<p><ul ng-repeat="property in products[whichItem].properties">
+            <li>{{property.one}}</li>
+            <li>{{property.two}}</li>
+            <li>{{property.three}}</li>
+            <li>{{property.four}}</li>
+          </ul></p>
+<p> Approximately delivered in: {{products[whichItem].delievry_date }} </p>
+<p>{{products[whichItem].additional_info}}</p>
+<p>{{products[whichItem].stock_status }}</p>
+
+</p>
+</div>

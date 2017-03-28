@@ -1,0 +1,81 @@
+{"products": [
+	{
+		"id": 1,
+		"title": "Almad",
+		"image": "images/1.jpg",
+		"price": 25,
+		"properties":[
+			{"one":"crispy","two":"crunchy","three":"all sizes","four":"all colours"}
+		],
+		"EMI": "starts with $78",
+		"delievry_date": "within 2 days",
+		"additional_info": "advanced technology for increasing the crispyness",
+		"stock_status":"Out of stock"
+	},
+	{
+		"id": 2,
+		"title": "Lays Wavy",
+		"image": "images/2.jpg",
+		"price": 50,
+		"properties":[
+			{"one":"wavy","two":"chocolate flavour","three":"25% off","four":""}
+		],
+		"EMI": "starts with $98",
+		"delievry_date": "within 5 days",
+		"additional_info": "dark chocolate and caramel flavour",
+		"stock_status":"In stock"
+	},
+	{
+		"id": 3,
+		"title": "Lays pudina wrap",
+		"image": "images/3.jpg",
+		"price": 8,
+		"properties":[
+			{"one":"pure pudina","two":"no MFG","three":"no preservatives added","four":"fresh oil"}
+		],
+		"EMI": "starts with $88",
+		"delievry_date": "within 8 days",
+		"additional_info": "pudina and other spinach flavours available",
+		"stock_status":"Out of stock"
+	},
+	{
+		"id": 4,
+		"title": "Lays Baked",
+		"image":"images/4.jpg",
+		"price": 8,
+		"properties":[
+			{"one":"0% cholostrol*","two":"no oil","three":"no fat","four":"purely baked"}
+		],
+		"EMI": "starts with $18",
+		"delievry_date": "within 1 day",
+		"additional_info": "baked!",
+		"stock_status":"In stock"
+	},
+	{
+		"id": 5,
+		"title": "Magnum chocolate",
+		"image": "images/5.jpg",
+		"price": 10,
+		"properties":[
+			{"one":"made of coca","two":"freshly made","three":"98% cocoa","four":"available in custom shape"}
+		],
+		"EMI": "starts with $8",
+		"delievry_date": "within 6 days",
+		"additional_info": "best in market quality cocoa ",
+		"stock_status":"Out of stock"
+	},
+	{
+		"id": 6,
+		"title": "Crayon icecream",
+		"image": "images/6.jpg",
+		"price": 2,
+		"properties":[
+			{"one":"12 colors","two":"24 shades available","three":"low fat","four":"sugarless"}
+		],
+		"EMI": "starts with $7",
+		"delievry_date": "within 3 days",
+		"additional_info": "advanced technology for increasing the crispyness",
+		"stock_status":"In stock"
+	}
+
+]}

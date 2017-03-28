@@ -1,0 +1,80 @@
+<div ng-app="listApp">
+<!--header starts-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href>
+          <img class="img-responsive" alt="Brand" ng-src="images/k2.jpg">
+        </a>
+      </div>
+      <p class="navbar-text navbar-right"><button class="btn btn-warning" ng-click="viewCart()" data-toggle="modal" data-target="#cartModal">Cart <span class="badge">{{cart_qty}}</span></button></p>
+    </div>
+
+    <div class="col-sm-3 col-md-3 pull-right">
+        <form class="navbar-form" role="search">
+          <div class="input-group"> 
+            <input ng-model="query" class="form-control" placeholder="Search">
+          </div>
+        </form>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-offset-2 col-sm-2" for="company">Sort by:</label>
+        <div class="col-sm-6 col-md-4">
+          <select class="form-control" placeholder="Sort by:" ng-model="listOrder">
+            <option value="title">title</option>
+            <option value="price">price</option>
+          </select> 
+        </div>
+      </div>
+
+  </nav>
+  <!--header ends-->
+
+     
+
+  <div class="row">
+    <div class="col-xs-18 col-sm-6 col-md-3" ng-repeat="product in products | filter: query | orderBy: listOrder">
+      <a href="#details/{{products.indexOf(product)}}" class="thumbnail" ng-click="goToProduct(product)">
+        <img ng-src="{{product.image}}" alt="">
+        <div class="caption">
+          <h4>{{product.title}}</h4>
+          <hr><p>{{product.price | currency:" USD$ "}}</p><hr>
+          <p><ul ng-repeat="property in product.properties">
+            <li>{{property.one}}</li>
+            <li>{{property.two}}</li>
+            <li>{{property.three}}</li>
+            <li>{{property.four}}</li>
+          </ul></p>
+          
+        </div>
+      </a>
+      <p><button class="btn btn-primary btn-xs" ng-click="addToCart(product)">add to cart</button></p>
+    </div>
+  </div>
+
+
+  <div ng-if="cart.length">
+    {{cartTotal}}
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          You have added {{cart.length}} items to the cart.
+          Total: {{getCartPrice()  | currency:" USD$ "}}
+        </div>
+        <div class="modal-footer">
+          <a href="#/checkout" data-dismiss="modal">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of modal-->
+  </div>
